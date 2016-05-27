@@ -3,7 +3,7 @@ var BaseUser = require('./../js/scripts.js').BaseUser;
 $(function() {
   $("#search-user").submit(function(e){
     e.preventDefault();
-    $('#user-image, #owner-info, .repositories, .repo').empty();
+    $('#user-image, #owner-info, .repositories, .repo, #page-numbers').empty();
 
 
 		var userQuery = $('#user-query').val();
@@ -11,7 +11,7 @@ $(function() {
 
     baseUser.sendQuery(userQuery, function(searchedUser){
       $("#user-image").append('<img class="avatar-img" src=' + searchedUser.avatar + '>')
-      $('#owner-info').append('<a href=' + searchedUser.gitLink  + ">" + searchedUser.owner + "</a>");
+      $('#other-info').html('<a href=' + searchedUser.gitLink  + ">" + searchedUser.owner + "</a>");
       for (i=0;i<searchedUser.repos.length;i++){
         $(".repositories").show();
         $('.repositories').append('<div class="repo"><a href=' + searchedUser.repos[i].html_url + ">" + searchedUser.repos[i].name + "</a></div>");
@@ -19,10 +19,10 @@ $(function() {
 
 
       for (i=1; i < (parseInt(searchedUser.pages.last.page) + 1); i++) {
-        $("#page-numbers").append("<li><a class='page'>" + i + "</a></li>");
+        $("#page-numbers").append("<span> <hr> <a class='page'>" + i + "</a> <hr> </span>");
       }
 
-      console.log(searchedUser.pages.last.page);
+      // console.log(searchedUser.pages.last.page);
 
       $(".page").click(function(e){
         e.preventDefault();

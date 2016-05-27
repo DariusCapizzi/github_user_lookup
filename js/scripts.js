@@ -15,7 +15,7 @@ SearchedUser = function(response, xhr) {
 };
 
 exports.BaseUser.prototype.sendQuery = function (userQuery, callback, page) {
-  $.get("https://api.github.com/users/" + userQuery + "/repos?page=" + page + "&access_token=" + gitApiToken).then(function(response, status, xhr){
+  $.get("https://api.github.com/users/" + userQuery + "/repos?page=" + page + "&per_page=5&access_token=" + gitApiToken).then(function(response, status, xhr){
     var searchedUser = new SearchedUser(response, xhr);
     callback(searchedUser);
   }).fail(function(error){

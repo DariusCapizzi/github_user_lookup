@@ -1,10 +1,13 @@
 .avatar-img {
   width: 110px;
-
+  margin: 30px;
+  border-radius: 100%;
 }
 
 body {
   background-color: #BCDDE8;
+  text-align: center;
+  margin: 30px;
 }
 
 .repositories{
@@ -22,4 +25,19 @@ body {
   display: inline-block;
   list-style: none;
 
+}
+
+.page {
+  display: inline-block;
+  font-size: 30px;
+}
+
+hr {
+  display: inline-block;
+  width: 10px;
+  border: 1px pink dotted;
+}
+
+#user-info {
+  margin-bottom: 20px;
 }
