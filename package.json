@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "bower-files": "^3.13.1",
+    "parse-link-header": "^0.4.1",
     "prompt": "^1.0.0"
   },
   "devDependencies": {

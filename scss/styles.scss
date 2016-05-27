@@ -1,0 +1,25 @@
+.avatar-img {
+  width: 110px;
+
+}
+
+body {
+  background-color: #BCDDE8;
+}
+
+.repositories{
+  // width: 100px;
+  border: 2px dotted black;
+  display: none;
+}
+
+.repo {
+  display: inline-block;
+  margin: 10px;
+}
+
+#page-numbers {
+  display: inline-block;
+  list-style: none;
+
+}
