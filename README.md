@@ -27,7 +27,7 @@ sudo npm install bower -g [bower](bower.io)
 
     sudo npm install gulp -g
 
-    npm init
+    npm install
 
     bower install
 
@@ -35,7 +35,7 @@ create a github [personal key](https://help.github.com/articles/creating-an-acce
 
     create a new file in the base of the directory called .env
 
-    in that file create a variable: exports.gitApiToken = <your token>;
+    in that file create a variable: exports.apiToken = <your token>;
 
       To create a token, visit the Settings area of your GitHub account, select Personal Access Tokens from the sidebar, and hit Generate New Token.
 
@@ -47,17 +47,9 @@ create a github [personal key](https://help.github.com/articles/creating-an-acce
 
     this will automatically run a local file in your default browser and open the root "index.html" in it.
 
-####explore!
-
-
-
 ## Known Bugs
 
     No known bugs.
-
-## Support and contact details
-
-    Leave a comment or open an issue here at GitHub for user paul-hess
 
 ## Technologies Used
     JavaScript, jQuery, node, gulp, bower

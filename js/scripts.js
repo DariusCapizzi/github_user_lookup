@@ -1,4 +1,4 @@
-var gitApiToken = require('./../.env').gitApiToken;
+var apiToken = require('./../.env').apiToken;
 var parse = require('parse-link-header');
 
 
